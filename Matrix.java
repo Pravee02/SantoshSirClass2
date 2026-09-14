@@ -46,7 +46,7 @@ public class Matrix {
             for (int j = 0; j < cols; j++) {
                 System.out.print(arr2[i][j]);
             }
-            System.out.println();
+            System.out.println(); 
         }
 
         int[][] result = new int[rows][cols];
