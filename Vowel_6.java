@@ -10,6 +10,8 @@ public class Vowel_6 {
 
         if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
             System.out.println("Ovewl");
+        } else if (letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U') {
+            System.out.println("Ovewl");
         } else {
             System.out.println("not ovewl");
         }
