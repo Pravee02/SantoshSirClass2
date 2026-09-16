@@ -13,7 +13,7 @@ public class Vowel_6 {
         } else if (letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U') {
             System.out.println("Ovewl");
         } else {
-            System.out.println("not ovewl");
+            System.out.println(" Consonant ");
         }
     }
 }
