@@ -27,7 +27,7 @@ public class PercenntageCallTotalmarks_15 {
 
         int result = percentage(a,b,c,d,e);
 
-        System.out.println("Average is  = " + result);
+        System.out.println("Percentage is  = " + result);
     }
     
 }

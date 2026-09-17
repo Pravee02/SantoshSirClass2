@@ -5,13 +5,14 @@ public class Matrix {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+
         System.out.println("enter the first matric  rows numbers");
         int rows = sc.nextInt();
 
         System.out.println("enter the first matric  columns numbers");
-
         int cols = sc.nextInt();
-
+        
+        System.out.println("enter the matrix values ");
         int[][] arr1 = new int[rows][cols];
 
         for (int i = 0; i < rows; i++) {
@@ -22,7 +23,7 @@ public class Matrix {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                System.out.print(arr1[i][j]);
+                System.out.print(" the first matrix is "+arr1[i] [j]);
             }
             System.out.println();
         }
@@ -34,6 +35,7 @@ public class Matrix {
 
         int cols2 = sc.nextInt();
 
+        System.out.println("enter the matrix values ");
         int[][] arr2 = new int[rows][cols];
 
         for (int i = 0; i < rows; i++) {
@@ -44,7 +46,7 @@ public class Matrix {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                System.out.print(arr2[i][j]);
+                System.out.print(" the second matrix is "+arr2[i][j]);
             }
             System.out.println(); 
         }
