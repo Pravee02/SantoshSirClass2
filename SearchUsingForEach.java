@@ -2,15 +2,15 @@ public class SearchUsingForEach
 {
     static boolean isElementPresent(int[] nums , int key)
     {
-        boolean result = false;
+       
         for(int i : nums)
         {
             if(i == key)
             {
-                result = true;
+                return true;
             }
         }
-        return result;
+        return false;
     }
     
     public static void main(String[] args) {
