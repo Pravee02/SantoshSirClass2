@@ -1,5 +1,5 @@
-import java.applet.*;
-import java.util.Scanner;
+
+import java.util.*;
 public class ObjectPassVarArgs
 {
     static void getArryValues(Objects...values)
@@ -16,11 +16,11 @@ public class ObjectPassVarArgs
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter number students present in class");
+        System.out.println("enter number of students present in class");
         int num = sc.nextInt();
 
        
-         Objects[] students = new Objects[num];
+        Objects[] students = new Objects[num];
         for(int i = 0 ; i < num; i++)
         {
             System.out.println("enter new student id");
@@ -32,7 +32,7 @@ public class ObjectPassVarArgs
            System.out.println("enter new student marks");
             int marks = sc.nextInt();
 
-            students[i] = new Objects(id, name, marks);
+            students[i] = new Objects(id, name, marks);         
         }
 
        

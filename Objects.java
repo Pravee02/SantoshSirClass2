@@ -8,6 +8,7 @@ public class Objects
         this.id = id;
         this.name = name;
         this.marks = marks;
+        
     }
     
 }
