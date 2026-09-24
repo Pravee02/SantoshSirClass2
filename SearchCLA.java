@@ -10,6 +10,9 @@ public class SearchCLA
             {
                 System.out.println(" yes present ");
             }
+            else{
+                System.out.println("not present ");
+            }
         }
     }
 }
