@@ -9,10 +9,14 @@ public class SearchCLA
             if(target == Integer.parseInt(i)) 
             {
                 System.out.println(" yes present ");
+                break;
+                 
             }
-            else{
-                System.out.println("not present ");
-            }
+           
+
         }
+        
+
+           
     }
 }
