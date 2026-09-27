@@ -67,7 +67,7 @@ public class Array2
                 System.out.println();
                 System.out.print(nums[left] + " -> ");
                 System.out.print(nums[right]);
-                left--;
+                left--; 
                 right++;
                 System.out.println();
                 }
