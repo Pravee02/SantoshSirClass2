@@ -7,16 +7,16 @@ public class MovedMiddeltoEnd
         int left = nums.length/2-1;
         int right = nums.length/2;
 
-        while(left >= 0 && right <= nums.length-1)
+        while(left >= 0 && right < nums.length-1)
         {
-            int temp = nums[left-1];
-            nums[left-1] = nums[left];
-            nums[left] = temp;
+            int temp = nums[left];
+            nums[left] = nums[left-1];
+            nums[left-1] = temp;
             left--;
 
-            int temp1 = nums[right+1];
-            nums[right+1] = nums[right];
-            nums[right] = temp1;
+            int temp1 = nums[right];
+            nums[right] = nums[right+1];
+            nums[right+1] = temp1;
             right++;
         }
         for(int i = 0 ; i < nums.length; i++)
