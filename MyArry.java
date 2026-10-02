@@ -26,7 +26,7 @@ public class MyArry
         rightIndex++; // after inserting at the end size got updated 
      }
 
-     
+     // insert at start 
       public void inserAtStart(int value)
      {
         if(rightIndex == length)
@@ -47,6 +47,7 @@ public class MyArry
        
     }
 
+    //insert at any position 
      public void inserAtPosition(int position , int value)
         {
             
@@ -73,6 +74,7 @@ public class MyArry
             rightIndex++;
         }
 
+        // printing array
         public void printArray()
         {
             System.out.println("index \t value");
@@ -83,6 +85,70 @@ public class MyArry
         System.out.println("Size = "+rightIndex);
         System.out.println();
 
+        }
+
+        //delete at end
+        public void deleteFromEnd()
+        {
+            if(rightIndex == 0)
+            {
+                System.out.println("array is empty");
+                return;
+            }
+            else
+            {
+
+                array[rightIndex-1] = 0;
+            }
+            rightIndex--;
+            array[rightIndex] = 0;
+        }
+
+        // delete from start
+        public void deleteFromStart()
+        {
+            if(rightIndex == 0)
+            {
+                System.out.println("array is empty");
+                return;
+            }
+            else
+            {
+
+                for(int i = 0; i < rightIndex- 1; i++)
+                {
+                    array[i] = array[i+1];
+                }
+                rightIndex--;
+                array[rightIndex] = 0;
+            }
+        }
+
+        
+
+        // delete at any position
+        public void deleteAtAnyPosition(int position )
+        {
+            if(rightIndex == 0)
+            {
+                 System.out.println("array is empty");
+                 return ;
+            }
+           else if(position < 0 || position > rightIndex)
+            {
+                System.out.println("invalid position ");
+            }
+
+            else
+            {
+                
+                for(int i = position ; i < rightIndex  ; i++)
+                {
+                    array[i] = array[i+1];
+                }
+                rightIndex--;
+                array[rightIndex] = 0;
+            }
         }
 }
 
