@@ -31,5 +31,4 @@ public class ArrayUserInput
         obj.display(a);
 
 
-    }
-}
+    } }
