@@ -10,7 +10,8 @@ public class BankLoan_3 {
         System.out.println(" enter your salary ");
         int salary = sc.nextInt();
 
-        if (age > 21 && salary >= 30_000) {
+        if (age > 21 && salary >= 30_000) 
+        {
             System.out.println("Loan Approved");
 
         } else {
