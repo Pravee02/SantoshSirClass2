@@ -26,7 +26,7 @@ public class Leetcode_258
 
     public static void main(String[] args)
     {
-        long num = 5555555555555L;
+        long num = 38;
         long result = addDigits(num);
         System.out.println(result);
     }
