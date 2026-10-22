@@ -74,6 +74,40 @@ public class Recursion2
         return count;
     }
 
+    static int index2 = 0;
+    static boolean checkArrayIsSorted(int[] arr)
+    {
+
+        if( index2 < arr.length-1 && arr[index2] > arr[index2+1])
+        {
+            return false;
+        }
+        else if(index2 < arr.length-1 )
+        {
+            index2++;
+            return checkArrayIsSorted(arr);
+        }
+        return true;
+    }
+
+
+    static int indices = 0;
+    static String removeChar(char[] arr) {
+        if (indices == arr.length) {
+            return "";
+        }
+
+        char ch = arr[indices];
+        indices++;
+
+        if (ch == 'r') {
+            return removeChar(arr);
+        }
+
+        return ch + removeChar(arr);
+    }
+
+
     public static void main(String[] args) 
     {
        // printNumbersDiffrentOrder(5);
@@ -84,8 +118,15 @@ public class Recursion2
     //    int[] arr1 = { 12, 45, 7, 89, 34, 21,100};
     //    System.out.println(returnMaxValue(arr1));
 
-       char[] arr3 = {'a','b','a','c','a','d','b'};
-       System.out.println(countCharacterAccurence(arr3));
+    //    char[] arr3 = {'a','b','a','c','a','d','b'};
+    //    System.out.println(countCharacterAccurence(arr3));
+
+        // int[] arr4 = {3,4, 8, 12, 19, 25, 31,1};
+        // System.out.println(checkArrayIsSorted(arr4));
+
+
+        char[] arr = {'p', 'r', 'o', 'g', 'r', 'a', 'm'};
+        System.out.println(removeChar(arr));
 
     }
 }
