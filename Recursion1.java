@@ -58,14 +58,21 @@ public class Recursion1
     static long fact = 1;
     static long factorial(int n)
     {
-        if(n > 0)
-        {
-            fact = fact * n;
-            factorial(n-1);
-        }
+        // if(n > 0)
+        // {
+        //     fact = fact * n;
+        //     factorial(n-1);
+        // }
         
-        return fact;
-    }
+        // return fact;
+
+    
+    if (n == 0) 
+        return 1;
+    return n * factorial(n - 1);
+}
+
+    
 
     static int power = 1;
     static void poweOfNumbers(int base, int expo)
@@ -113,12 +120,12 @@ public class Recursion1
 
         //sumOfNnumber(10);
 
-        //System.out.println(factorial(5));
+        System.out.println(factorial(5));
 
         //poweOfNumbers(2,5);
 
-        System.out.println(sumOfDigits(256));
+        //System.out.println(sumOfDigits(256));
 
-        System.out.println(reverseNumber(1234));
+        //System.out.println(reverseNumber(1234));
     }
 }
