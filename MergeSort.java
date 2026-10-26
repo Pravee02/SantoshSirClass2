@@ -59,14 +59,13 @@ public class MergeSort
             arr[low + x] = temp[x]; 
         }
         
-
     }
     
 
     
     public static void main(String[] args) 
     {
-        int[] arr = {10,4,8,5,6,3,7,2,1};
+        int[] arr = {10,4,8,1};
         System.out.println("before sorting");
         
 
