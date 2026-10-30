@@ -49,6 +49,6 @@ public class QuickSort {
        {
         System.out.print(i+ " ");
        }
-        System.out.println(!(5 > 3));
+         
     }
 }
