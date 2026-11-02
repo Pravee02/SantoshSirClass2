@@ -4,11 +4,11 @@ public class TwoDArray2
     static void getMaxElement(int[][] arr)
     {
         int max = 0;
-        for(int i = 0; i < arr.length; i++)
+        for(int rows = 0; rows < arr.length; rows++)
         {
-            for(int j = 0 ; j < arr[i].length; j++)
+            for(int col = 0 ; col < arr[rows].length; col++)
             {
-                System.out.print(arr[i][j] + " ");
+                System.out.print(arr[rows][col] + " ");
             }
             System.out.println();
         }
