@@ -197,6 +197,105 @@ public class TwoDArray3 {
 
     }
 
+    static int getMinEvenNumber(int[][] arr)
+    {
+        if(arr == null)
+        {
+            System.out.println("array is null");
+            return -1;
+        }
+        int mineven = Integer.MAX_VALUE;
+         for(int row = 0; row < arr.length;row++)
+        {
+            for(int col = 0 ; col < arr[0].length;col++)
+            {
+                if(arr[row][col] %2 == 0)
+                {
+                    if(arr[row][col] < mineven)
+                    {
+                        mineven = arr[row][col];
+                    }
+                }
+            }
+        }
+        return mineven;
+
+    }
+
+    static int[][] matriMulByGivenNumber(int[][] arr)
+    {
+        if(arr == null)
+        {
+            return null;
+        }
+
+        int[][] newArray = new int[arr.length][arr[0].length];
+
+        for(int row = 0; row < arr.length;row++)
+        {
+            for(int col = 0 ; col < arr[0].length;col++)
+            {
+                newArray[row][col] = arr[row][col] * -1;
+            }
+        }
+        return newArray;
+        
+    }
+
+    static int[][] multiDiagElements(int[][] arr)
+    {
+        if(arr == null)
+        {
+            return null;
+        }
+        int[][] newArray = new int[arr.length][arr[0].length];
+
+        for(int row = 0; row < arr.length;row++)
+        {
+            for(int col = 0 ; col < arr[0].length;col++)
+            {
+                if(col == row)
+                {
+                    newArray[row][col] = arr[row][col] * 10;
+                }
+                else
+                {
+                newArray[row][col] = arr[row][col];
+                }
+            }
+        }
+        return newArray;
+    }
+
+    static int countGivenElement(int[][] arr,int givenElement)
+    {
+        int count = 0;
+        for(int row = 0; row < arr.length;row++)
+        {
+            for(int col = 0 ; col < arr[0].length;col++)
+            {
+                if(arr[row][col] == givenElement)
+                {
+                    count++;
+                }
+            }
+        }
+        return count;
+
+    }
+
+    static boolean isElementPresent(int[][] arr, int key)
+    {
+
+        for(int row = 0; row < arr.length;row++)
+        {
+            if(arr[row][row] == key)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
         
         int[][] arr = {{3,5,9},
@@ -297,6 +396,64 @@ public class TwoDArray3 {
         for(int x: maxresult)
         {
             System.out.println(x);
+        }
+
+        //find minimum even in the array
+        System.out.println();
+        System.out.println("minimum even number was ");
+        int mineven = getMinEvenNumber(arr);
+        if(mineven != Integer.MAX_VALUE)
+        {
+            System.out.println(mineven);
+        }
+        else{
+            System.out.println("the array contain only odd elements ");
+        }
+
+        //multiply matrix by -1
+        System.out.println();
+        System.out.println("mutrix multiply by -1");
+        int[][] mulresult= matriMulByGivenNumber(arr);
+        for(int[] row : mulresult)
+        {
+            for(int col : row)
+            {
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
+
+        //multiply the main diagnal elemnts by 10
+        System.out.println();
+        System.out.println("the multiplies main diagnal by 10 ");
+        int[][] diagresult = multiDiagElements(arr);
+        for(int[] row : diagresult)
+        {
+            for(int col : row)
+            {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+
+        // counting how many times an element accur 
+        System.out.println();
+        int givenElement = 6;
+        int timesRepeatEle = countGivenElement( arr,  givenElement);
+        System.out.println("element "+ givenElement + " accurs " + timesRepeatEle + " times ");
+        
+
+        // search element in main diagnal
+        System.out.println();
+        int element = 6;
+        System.out.println("the element "+ element + " is ");
+        boolean ans = isElementPresent(arr,element);
+        if(ans)
+        {
+            System.out.println("present");
+        }
+        else{
+            System.out.println("not present ");
         }
 }
 }
