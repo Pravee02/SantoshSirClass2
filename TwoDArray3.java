@@ -296,6 +296,45 @@ public class TwoDArray3 {
         }
         return false;
     }
+
+    static int diagonalSum(int[][] mat) {
+        
+        int leftcol = 0;
+        int rightcol = mat[0].length-1;
+        //int count = 0;
+        int sum = 0;
+        for(int row = 0; row < mat.length; row++)
+        {
+            for(int col = 0 ; col <mat[row].length;col++)
+            {
+                if(col == leftcol)
+                {
+                    sum = sum + mat[row][leftcol];
+                    
+                }
+                else if(col == rightcol)
+                {
+                    sum = sum + mat[row][rightcol];
+                }
+                
+              
+            }
+           
+            // if( leftcol < rightcol&&count == 0){
+            // leftcol++;
+            // rightcol--;
+            // }
+            // else if(leftcol==rightcol || count!=0)
+            // {
+            //     leftcol--;
+            //     rightcol++;
+            //     count++;
+            // }
+            leftcol++;       // CHANGED
+            rightcol--;
+        }
+        return sum;
+    }
     public static void main(String[] args) {
         
         int[][] arr = {{3,5,9},
@@ -455,5 +494,11 @@ public class TwoDArray3 {
         else{
             System.out.println("not present ");
         }
+
+
+        // leet code question
+         int diagsum = diagonalSum(arr);
+         System.out.println();
+         System.out.println("diagnal sum was " + diagsum);
 }
 }
