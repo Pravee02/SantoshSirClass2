@@ -107,6 +107,21 @@ public class RegMetaChars
         System.out.println(s3.matches("[abc]{3,7}"));
         System.out.println();
     }
+
+    //5 check for 0 and 1
+    public static void demoQuestMarkQuant()
+    {
+        String s1 = "ac";
+        String s2 = "abc";
+        String s3 = "abbc";
+        System.out.println(s1.matches("ab?c"));
+        System.out.println(s2.matches("ab?c"));
+        System.out.println(s3.matches("ab?c"));
+
+        System.out.println(s3.matches("abb?c"));
+ 
+        
+    }
     public static void main(String[] args) {
         
 
@@ -124,5 +139,6 @@ public class RegMetaChars
         demoPlusQuant();
         demoExactCount();
         demoMinMaxQuant();
+        demoQuestMarkQuant();
     }
 }
