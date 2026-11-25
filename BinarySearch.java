@@ -3,6 +3,7 @@ public class BinarySearch
 {
     static int binarySearch(int[] arr , int target)
     {
+        
         // edge case 1: null
         if(arr == null)
         {
